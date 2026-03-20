@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --color--primary: #E50914;
+  --color--sec: #BB1024;
+  --color--dark: #221F1F;
+  --color--light: #F5F5F1;
+}
+
+.encabezado {
+  margin-right: 40px;
+  margin-top: 20px;
+}
+
+.encabezado > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.encabezado > div > div {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.encabezado > div > div > select {
+  border-radius: 5px;
+  padding: 5px;
+  width: 90px;
+}
+
+.encabezado > div > div > button {
+  background-color: var(--color--primary);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.features-tendencias {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  border: 1px solid black;
+  width: 100vw;
+  height: 50vh;
+}
+
