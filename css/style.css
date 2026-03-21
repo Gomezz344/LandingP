@@ -11,15 +11,31 @@
   --color--light: #F5F5F1;
 }
 
+body {
+  font-family: sans-serif;
+}
+
 .encabezado {
   margin-right: 40px;
   margin-top: 20px;
+  background: transparent;
+  width: 100%;
+  top: 0;
+  position: absolute;
 }
 
 .encabezado > div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+}
+
+.encabezado > div > img {
+  height: 70px;
+  position: relative;
+  left: 100px;
+  bottom: 10px;
 }
 
 .encabezado > div > div {
@@ -27,46 +43,56 @@
   display: flex;
   flex-direction: row;
   gap: 10px;
+  border: none;
+  position: relative;
+  right: 100px;
 }
 
 .encabezado > div > div > select {
+  color: #fff;
+  background-color: var(--color--dark);
   border-radius: 5px;
-  padding: 5px;
-  width: 90px;
+  text-align: center;
+  padding-left:15px;
+  width: 120px;
+  height: 30px;
+  font-weight: 600;
 }
+
+.translate {
+  background-color: #fff;
+  mask-image: url(/assets/imgs/translate.png);
+  mask-size: 60%;
+  mask-repeat: no-repeat;
+  border: 1px solid black;
+  position: relative;
+  left: 63px;
+  top: 12px;
+}
+
+.translate-svg {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  left: 400px;
+
+}
+
+
 
 .encabezado > div > div > button {
   background-color: var(--color--primary);
   border-radius: 5px;
   padding: 5px;
+  color: #fff;
+  border: none;
+  height: 30px;
+  width: 120px;
+  font-weight: 600;
 }
-
-.features-tendencias {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  border: 1px solid black;
-  width: 100vw;
-  height: 50vh;
-}
-
-:root {
-    --color--primary: #E50914;
-    --color--sec: #BB1024;
-    --color--dark: #221F1F;
-    --color--light: #F5F5F1;
-}
-
-.features-tendencias {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    border: 1px solid black;
-    width: 100vw;
-    height: 50vh;
-}
-
 
 .hero {
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../img/NF.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../assets/imgs/NF.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -80,11 +106,12 @@
 
 .hero h1 {
     font-family: "Archivo Black", sans-serif;
-    font-weight: 400;
+    font-weight: 700;
     color: white;
     font-size: 3.5rem;
     margin-bottom: 20px;
     max-width: 600px;
+
 }
 
 .hero p {
@@ -119,4 +146,21 @@
     font-size: 1.1rem;
     font-weight: bold;
     cursor: pointer;
+}
+
+
+.features-tendencias {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  border: 1px solid black;
+  width: 100vw;
+  height: 50vh;
+}
+
+.features-tendencias {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    border: 1px solid black;
+    width: 100vw;
+    height: 50vh;
 }
